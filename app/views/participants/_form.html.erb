@@ -11,14 +11,7 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :ticket_number %>
-    <%= f.text_field :ticketnum %>
-  </div>
-  <div class="field">
-    <%= f.label :ticket_code %>
-    <%= f.text_field :ticketcode %>
-  </div>
+  
   <div class="field">
     <%= f.label :first_name %>
     <%= f.text_field :firstname %>
@@ -59,9 +52,10 @@
     <%= f.label :email %>
     <%= f.text_field :email %>
   </div>
-  <div class="field">
-   <%=f.label :game_choice %>
-	<%= f.collection_select :, @games, :id, :name %>
+<div class="field">
+ <%=f.label :game_choice %>
+        <%= @games = Game.find(:all) 
+        collection_select(:game, :game_name, @games, :name, :name) %>
   </div>
   <div class="field">
     <%= f.label :at_event? %>

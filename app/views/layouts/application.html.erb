@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Botb</title>
+  <title>In the Pocket</title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
+	<div id="container">
+		<div id="nav">
+			<div id="groupnav">
+              <p>EVENT MANAGEMENT</p>
+                <li><%= link_to 'Register a Participant', new_participant_path %></li>
+				<li><%= link_to 'See all Registered Participants', participants_path %> </li>
+                  </div><!-- end of groupnav div -->
+                  	
+            </div> <!-- end of nav div -->
 
+         
+
+      <div id = "content">
+						<%- flash.each do |name, msg| -%>
+			        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+			      <%- end -%>
 <%= yield %>
-
+</div>
+</div>
 </body>
 </html>
