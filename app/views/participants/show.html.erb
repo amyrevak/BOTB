@@ -1,0 +1,100 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ticket Number:</b>
+  <%= @participant.ticketnum %>
+</p>
+
+<p>
+  <b>Ticket Code:</b>
+  <%= @participant.ticketcode %>
+</p>
+
+<p>
+  <b>First Name:</b>
+  <%= @participant.firstname %>
+</p>
+
+<p>
+  <b>Last Name:</b>
+  <%= @participant.lastname %>
+</p>
+
+<p>
+  <b>Role:</b>
+  <%= @participant.role %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%= @participant.company %>
+</p>
+
+<p>
+  <b>Street:</b>
+  <%= @participant.street %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @participant.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @participant.state %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @participant.zip %>
+</p>
+
+<p>
+  <b>Phone Num:</b>
+  <%= @participant.phonenum %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @participant.email %>
+</p>
+
+<p>
+  <b>Game Choice:</b>
+  <%= @participant.gamechoice %>
+</p>
+
+<p>
+  <b>Number of games played:</b>
+  <%= @participant.numgamesplayed %>
+</p>
+
+<p>
+  <b>Number of wins:</b>
+  <%= @participant.numwins %>
+</p>
+
+<p>
+  <b>Completed:</b>
+  <%= @participant.completed %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @participant.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @participant.updated_at %>
+</p>
+
+<p>
+  <b>At event:</b>
+  <%= @participant.at_event %>
+</p>
+
+
+<%= link_to 'Edit', edit_participant_path(@participant) %> |
+<%= link_to 'Back', participants_path %>

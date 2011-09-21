@@ -1,0 +1,59 @@
+<h1>Listing participants</h1>
+
+<table>
+  <tr>
+    <th>Ticket Number</th>
+    <th>Ticket Code</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Role</th>
+    <th>Company</th>
+    <th>Street</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Phone Number</th>
+    <th>Email</th>
+    <th>Game Choice</th>
+    <th>Number of games played</th>
+    <th>Number of wins</th>
+    <th>Completed</th>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Check In?</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @participants.each do |participant| %>
+  <tr>
+    <td><%= participant.ticketnum %></td>
+    <td><%= participant.ticketcode %></td>
+    <td><%= participant.firstname %></td>
+    <td><%= participant.lastname %></td>
+    <td><%= participant.role %></td>
+    <td><%= participant.company %></td>
+    <td><%= participant.street %></td>
+    <td><%= participant.city %></td>
+    <td><%= participant.state %></td>
+    <td><%= participant.zip %></td>
+    <td><%= participant.phonenum %></td>
+    <td><%= participant.email %></td>
+    <td><%= participant.gamechoice %></td>
+    <td><%= participant.numgamesplayed %></td>
+    <td><%= participant.numwins %></td>
+    <td><%= participant.completed %></td>
+    <td><%= participant.created_at %></td>
+    <td><%= participant.updated_at %></td>
+    <td><%= participant.at_event %></td>
+    <td><%= link_to 'Show', participant %></td>
+    <td><%= link_to 'Edit', edit_participant_path(participant) %></td>
+    <td><%= link_to 'Destroy', participant, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Participant', new_participant_path %>
